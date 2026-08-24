@@ -1,0 +1,6 @@
+coqui-tts[codec]>=0.25.1
+# transformers 5.x убрал isin_mps_friendly — XTTS не импортируется
+transformers>=4.47,<5
+sounddevice>=0.5.1
+soundfile>=0.12.1
+numpy<2.0

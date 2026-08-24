@@ -1,0 +1,8 @@
+.venv/
+__pycache__/
+*.pyc
+data/voice/*.wav
+out/*.wav
+lab/
+models/
+.env
