@@ -32,7 +32,13 @@ E:\development\voice-clone\setup.ps1
 .\.venv\Scripts\python.exe src\record.py --list
 ```
 
-2. Запись референса (читать `data/script.txt`):
+2а. Конвертация готовых записей (ogg, m4a, mp3, mp4) в референсы:
+
+```powershell
+.\.venv\Scripts\python.exe src\prepare.py C:\Users\<user>\Desktop\*.ogg
+```
+
+2б. Либо запись напрямую с микрофона:
 
 ```powershell
 .\.venv\Scripts\python.exe src\record.py -s 20 -o data/voice/ref.wav
@@ -67,6 +73,9 @@ E:\development\voice-clone\setup.ps1
 |---|---|---|
 | `no kernel image is available` | torch не cu128 | переставить torch с индекса cu128 |
 | `WeightsUnpickler error` | torch≥2.6 `weights_only` | уже обойдено в `src/speak.py` |
+| `torchcodec required` | torch>=2.9 | ставить `coqui-tts[codec]` |
+| `libtorchcodec_core*.dll` не грузится | нет shared FFmpeg | `winget install BtbN.FFmpeg.GPL.Shared.7.1` |
+| DLL есть, но не видны | Python 3.8+ игнорирует PATH | обойдено в `src/ffmpeg_dlls.py` |
 | Металлический голос | тихий/шумный референс | перезаписать, следить за пиком |
 | Неверные ударения | XTTS не расставляет их | ставить `+` вручную или перейти на F5-TTS + RUAccent |
 

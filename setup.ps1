@@ -2,6 +2,11 @@
 $ErrorActionPreference = 'Stop'
 Set-Location $PSScriptRoot
 
+# torchcodec грузит DLL FFmpeg; статические сборки не подходят,
+# версия 8+ им не поддерживается — нужна именно shared 7.1
+winget install --id BtbN.FFmpeg.GPL.Shared.7.1 -e `
+    --accept-source-agreements --accept-package-agreements
+
 py -3.12 -m venv .venv
 .\.venv\Scripts\python.exe -m pip install --upgrade pip
 
