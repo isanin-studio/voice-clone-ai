@@ -6,6 +6,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 import ffmpeg_dlls  # noqa: F401  регистрирует DLL FFmpeg
+from accents import apply_stress
 
 os.environ.setdefault("COQUI_TOS_AGREED", "1")
 
@@ -40,10 +41,12 @@ def resolve_refs(pattern: str) -> list[str]:
 
 def read_text(args: argparse.Namespace) -> str:
     if args.file:
-        return (ROOT / args.file).read_text(encoding="utf-8").strip()
-    if args.text:
-        return args.text.strip()
-    return sys.stdin.read().strip()
+        raw = (ROOT / args.file).read_text(encoding="utf-8")
+    elif args.text:
+        raw = args.text
+    else:
+        raw = sys.stdin.read()
+    return apply_stress(raw.strip())
 
 
 def main() -> int:

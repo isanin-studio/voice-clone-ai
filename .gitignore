@@ -2,6 +2,7 @@
 __pycache__/
 *.pyc
 data/voice/*.wav
+data/voice/*.pth
 out/*.wav
 lab/
 models/
