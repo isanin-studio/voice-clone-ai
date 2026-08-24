@@ -4,6 +4,9 @@ import os
 import sys
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).parent))
+import ffmpeg_dlls  # noqa: F401  регистрирует DLL FFmpeg
+
 os.environ.setdefault("COQUI_TOS_AGREED", "1")
 
 import torch
