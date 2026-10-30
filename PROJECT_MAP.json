@@ -1,0 +1,376 @@
+{
+  "schemaVersion": 1,
+  "snapshot": "2026-10-30T14:47:11.360Z",
+  "project": "voice-clone",
+  "root": ".",
+  "method": "static-local-index",
+  "limitations": [
+    "Нет динамических вызовов и сетевых интеграций",
+    "Сверять sha256 и evidence.line с текущими исходниками",
+    "Наличие зависимости не доказывает работоспособность"
+  ],
+  "nodes": [
+    {
+      "id": "project:voice-clone",
+      "type": "project",
+      "name": "voice-clone"
+    },
+    {
+      "id": "project:voice-clone/file:README.md",
+      "type": "file",
+      "path": "README.md",
+      "sha256": "3ad1b32e8df8c13966ea438dbf6a0d8b538e0c81f9b7544932c6f97016cebf9a",
+      "bytes": 4795
+    },
+    {
+      "id": "project:voice-clone/file:docs/RESEARCH.md",
+      "type": "file",
+      "path": "docs/RESEARCH.md"
+    },
+    {
+      "id": "project:voice-clone/file:requirements.txt",
+      "type": "file",
+      "path": "requirements.txt",
+      "sha256": "4912ffcdbf4112878196070aadd72e1a8b2389c7691eaf6b58ff5a9a076e30b8",
+      "bytes": 183
+    },
+    {
+      "id": "project:voice-clone/file:say.ps1",
+      "type": "file",
+      "path": "say.ps1",
+      "sha256": "0ed0ba5b985203e81818b3b1fab9adf90dcd3f441422060bb22467a0b34fd3f8",
+      "bytes": 363
+    },
+    {
+      "id": "project:voice-clone/file:setup.ps1",
+      "type": "file",
+      "path": "setup.ps1",
+      "sha256": "aa0ed7027b082276d256eaa0f138bf4ab16898ac63a9887b95fd54c4ffff6bf2",
+      "bytes": 953
+    },
+    {
+      "id": "project:voice-clone/file:src/accent.py",
+      "type": "file",
+      "path": "src/accent.py",
+      "sha256": "8ff5e0b66e19e75cff9c2264d18c6e3b27d27a185c0f58fa375cd3e2656c43b7",
+      "bytes": 2603
+    },
+    {
+      "id": "project:voice-clone/file:src/accents.py",
+      "type": "file",
+      "path": "src/accents.py",
+      "sha256": "4f4af53e0cf50c541434637e2cda6762aa31daefe9d5c11f3fd73f26468301e6",
+      "bytes": 573
+    },
+    {
+      "id": "project:voice-clone/file:src/ffmpeg_dlls.py",
+      "type": "file",
+      "path": "src/ffmpeg_dlls.py",
+      "sha256": "88448ef2112ae41f897419262850033955ee52f8c977c4c1515738f381f69946",
+      "bytes": 1375
+    },
+    {
+      "id": "project:voice-clone/file:src/prepare.py",
+      "type": "file",
+      "path": "src/prepare.py",
+      "sha256": "e990d5056ecc222129ba39e07522662142c5ea356e52e484afe31efd786a3c74",
+      "bytes": 2391
+    },
+    {
+      "id": "project:voice-clone/file:src/record.py",
+      "type": "file",
+      "path": "src/record.py",
+      "sha256": "2750cfc0c34763114309877a791c8d328806f9946f5c0440754a561780d49549",
+      "bytes": 1759
+    },
+    {
+      "id": "project:voice-clone/file:src/speak.py",
+      "type": "file",
+      "path": "src/speak.py",
+      "sha256": "202e7af8b6ba3213b2a9c9b437f2d2150ee816125afea81921e24c3239d92e60",
+      "bytes": 2683
+    },
+    {
+      "id": "project:voice-clone/file:src/voiceprint.py",
+      "type": "file",
+      "path": "src/voiceprint.py",
+      "sha256": "03658b9807a7464cf5a0479ff6a3a29974cd6146d0b7ad27fa47f88749fe2222",
+      "bytes": 3199
+    },
+    {
+      "id": "package:pypi:coqui-tts",
+      "type": "package",
+      "name": "coqui-tts",
+      "ecosystem": "pypi"
+    },
+    {
+      "id": "package:pypi:transformers",
+      "type": "package",
+      "name": "transformers",
+      "ecosystem": "pypi"
+    },
+    {
+      "id": "package:pypi:sounddevice",
+      "type": "package",
+      "name": "sounddevice",
+      "ecosystem": "pypi"
+    },
+    {
+      "id": "package:pypi:soundfile",
+      "type": "package",
+      "name": "soundfile",
+      "ecosystem": "pypi"
+    },
+    {
+      "id": "package:pypi:numpy",
+      "type": "package",
+      "name": "numpy",
+      "ecosystem": "pypi"
+    }
+  ],
+  "edges": [
+    {
+      "source": "project:voice-clone",
+      "target": "project:voice-clone/file:README.md",
+      "relation": "contains",
+      "evidence": {
+        "path": "README.md"
+      },
+      "method": "filesystem"
+    },
+    {
+      "source": "project:voice-clone",
+      "target": "project:voice-clone/file:docs/RESEARCH.md",
+      "relation": "contains",
+      "evidence": {
+        "path": "docs/RESEARCH.md"
+      },
+      "method": "filesystem"
+    },
+    {
+      "source": "project:voice-clone",
+      "target": "project:voice-clone/file:requirements.txt",
+      "relation": "contains",
+      "evidence": {
+        "path": "requirements.txt"
+      },
+      "method": "filesystem"
+    },
+    {
+      "source": "project:voice-clone",
+      "target": "project:voice-clone/file:say.ps1",
+      "relation": "contains",
+      "evidence": {
+        "path": "say.ps1"
+      },
+      "method": "filesystem"
+    },
+    {
+      "source": "project:voice-clone",
+      "target": "project:voice-clone/file:setup.ps1",
+      "relation": "contains",
+      "evidence": {
+        "path": "setup.ps1"
+      },
+      "method": "filesystem"
+    },
+    {
+      "source": "project:voice-clone",
+      "target": "project:voice-clone/file:src/accent.py",
+      "relation": "contains",
+      "evidence": {
+        "path": "src/accent.py"
+      },
+      "method": "filesystem"
+    },
+    {
+      "source": "project:voice-clone",
+      "target": "project:voice-clone/file:src/accents.py",
+      "relation": "contains",
+      "evidence": {
+        "path": "src/accents.py"
+      },
+      "method": "filesystem"
+    },
+    {
+      "source": "project:voice-clone",
+      "target": "project:voice-clone/file:src/ffmpeg_dlls.py",
+      "relation": "contains",
+      "evidence": {
+        "path": "src/ffmpeg_dlls.py"
+      },
+      "method": "filesystem"
+    },
+    {
+      "source": "project:voice-clone",
+      "target": "project:voice-clone/file:src/prepare.py",
+      "relation": "contains",
+      "evidence": {
+        "path": "src/prepare.py"
+      },
+      "method": "filesystem"
+    },
+    {
+      "source": "project:voice-clone",
+      "target": "project:voice-clone/file:src/record.py",
+      "relation": "contains",
+      "evidence": {
+        "path": "src/record.py"
+      },
+      "method": "filesystem"
+    },
+    {
+      "source": "project:voice-clone",
+      "target": "project:voice-clone/file:src/speak.py",
+      "relation": "contains",
+      "evidence": {
+        "path": "src/speak.py"
+      },
+      "method": "filesystem"
+    },
+    {
+      "source": "project:voice-clone",
+      "target": "project:voice-clone/file:src/voiceprint.py",
+      "relation": "contains",
+      "evidence": {
+        "path": "src/voiceprint.py"
+      },
+      "method": "filesystem"
+    },
+    {
+      "source": "project:voice-clone/file:src/accent.py",
+      "target": "project:voice-clone/file:src/ffmpeg_dlls.py",
+      "relation": "imports_local",
+      "evidence": {
+        "path": "src/accent.py",
+        "line": 12
+      },
+      "method": "lexical-existing-file"
+    },
+    {
+      "source": "project:voice-clone/file:src/accent.py",
+      "target": "project:voice-clone/file:src/speak.py",
+      "relation": "imports_local",
+      "evidence": {
+        "path": "src/accent.py",
+        "line": 17
+      },
+      "method": "lexical-existing-file"
+    },
+    {
+      "source": "project:voice-clone/file:src/prepare.py",
+      "target": "project:voice-clone/file:src/ffmpeg_dlls.py",
+      "relation": "imports_local",
+      "evidence": {
+        "path": "src/prepare.py",
+        "line": 11
+      },
+      "method": "lexical-existing-file"
+    },
+    {
+      "source": "project:voice-clone/file:src/speak.py",
+      "target": "project:voice-clone/file:src/ffmpeg_dlls.py",
+      "relation": "imports_local",
+      "evidence": {
+        "path": "src/speak.py",
+        "line": 8
+      },
+      "method": "lexical-existing-file"
+    },
+    {
+      "source": "project:voice-clone/file:src/speak.py",
+      "target": "project:voice-clone/file:src/accents.py",
+      "relation": "imports_local",
+      "evidence": {
+        "path": "src/speak.py",
+        "line": 9
+      },
+      "method": "lexical-existing-file"
+    },
+    {
+      "source": "project:voice-clone/file:src/voiceprint.py",
+      "target": "project:voice-clone/file:src/ffmpeg_dlls.py",
+      "relation": "imports_local",
+      "evidence": {
+        "path": "src/voiceprint.py",
+        "line": 13
+      },
+      "method": "lexical-existing-file"
+    },
+    {
+      "source": "project:voice-clone/file:src/voiceprint.py",
+      "target": "project:voice-clone/file:src/accents.py",
+      "relation": "imports_local",
+      "evidence": {
+        "path": "src/voiceprint.py",
+        "line": 14
+      },
+      "method": "lexical-existing-file"
+    },
+    {
+      "source": "project:voice-clone/file:src/voiceprint.py",
+      "target": "project:voice-clone/file:src/speak.py",
+      "relation": "imports_local",
+      "evidence": {
+        "path": "src/voiceprint.py",
+        "line": 19
+      },
+      "method": "lexical-existing-file"
+    },
+    {
+      "source": "project:voice-clone/file:requirements.txt",
+      "target": "package:pypi:coqui-tts",
+      "relation": "declares_dependency",
+      "kind": "runtime",
+      "evidence": {
+        "path": "requirements.txt",
+        "line": 1
+      },
+      "method": "manifest"
+    },
+    {
+      "source": "project:voice-clone/file:requirements.txt",
+      "target": "package:pypi:transformers",
+      "relation": "declares_dependency",
+      "kind": "runtime",
+      "evidence": {
+        "path": "requirements.txt",
+        "line": 3
+      },
+      "method": "manifest"
+    },
+    {
+      "source": "project:voice-clone/file:requirements.txt",
+      "target": "package:pypi:sounddevice",
+      "relation": "declares_dependency",
+      "kind": "runtime",
+      "evidence": {
+        "path": "requirements.txt",
+        "line": 4
+      },
+      "method": "manifest"
+    },
+    {
+      "source": "project:voice-clone/file:requirements.txt",
+      "target": "package:pypi:soundfile",
+      "relation": "declares_dependency",
+      "kind": "runtime",
+      "evidence": {
+        "path": "requirements.txt",
+        "line": 5
+      },
+      "method": "manifest"
+    },
+    {
+      "source": "project:voice-clone/file:requirements.txt",
+      "target": "package:pypi:numpy",
+      "relation": "declares_dependency",
+      "kind": "runtime",
+      "evidence": {
+        "path": "requirements.txt",
+        "line": 6
+      },
+      "method": "manifest"
+    }
+  ]
+}
